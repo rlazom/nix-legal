@@ -1,30 +1,156 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminación de Cuenta y Datos</title>
+    <title>Account & Data Deletion Request</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; }
-        h1 { color: #d9534f; }
-        .btn-contacto { display: inline-block; padding: 10px 20px; background-color: #0275d8; color: white; text-decoration: none; border-radius: 5px; }
+        :root {
+            --primary-color: #1a73e8; /* Material Blue */
+            --background-color: #f8f9fa;
+            --surface-color: #ffffff;
+            --text-main: #202124;
+            --text-secondary: #5f6368;
+            --warning-color: #b00020; /* Material Red */
+            --border-color: #dadce0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: var(--surface-color);
+            max-width: 640px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--text-main);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+
+        li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .notice-box {
+            background-color: #fce8e6;
+            border-left: 4px solid var(--warning-color);
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 32px;
+        }
+
+        .notice-box p {
+            color: #a51d24;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .btn-submit {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #1557b0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
     </style>
 </head>
 <body>
-    <h1>Solicitud de Eliminación de Datos</h1>
-    <p>Si deseas eliminar tu cuenta y todos los datos asociados a ella de nuestra aplicación, puedes hacerlo enviando una solicitud directa.</p>
-    
-    <h3>¿Qué datos se eliminarán?</h3>
-    <ul>
-        <li>Historial de usuario y perfil.</li>
-        <li>Identificadores del dispositivo.</li>
-        <li>Cualquier dato almacenado en nuestros servidores.</li>
-    </ul>
 
-    <h3>Cómo solicitar la eliminación:</h3>
-    <p>Haz clic en el siguiente enlace para enviarnos un correo electrónico con el asunto "Eliminar mi Cuenta":</p>
-    <a href="mailto:rlazomdev@gmail.com?subject=Solicitud de Eliminacion de Cuenta" class="btn-contacto">Solicitar Eliminación por Email</a>
-    
-    <p><em>Nota: El proceso puede tardar hasta 72 horas hábiles en completarse.</em></p>
+    <div class="container">
+        <h1>Account & Data Deletion Request</h1>
+        <p>In accordance with data privacy regulations and app store policies, you have the right to request the permanent deletion of your account and all associated data from our systems.</p>
+
+        <div class="notice-box">
+            <p><strong>Warning:</strong> This action is permanent and cannot be undone. Once your request is processed, you will lose access to your account, subscriptions, and history.</p>
+        </div>
+
+        <div class="section-title">What data will be deleted?</div>
+        <ul>
+            <li>Your user profile information (Name, Email, Username).</li>
+            <li>All personalized settings and application preferences.</li>
+            <li>Historical activity data and logs associated with your account.</li>
+            <li>Any stored third-party platform tokens and identifiers.</li>
+        </ul>
+
+        <div class="section-title">What data may be retained?</div>
+        <p>We only retain minimal data required to comply with legal, financial, or regulatory obligations (such as transaction invoices or fraud prevention tokens). This data will be securely isolated and never used for any marketing purposes.</p>
+
+        <div class="section-title">How to submit your request</div>
+        <p>To initiate the deletion process, please click the button below to send us an automated email request. Make sure to send it from the email address registered with your account so we can verify your identity.</p>
+
+        <div class="button-container">
+            <a href="mailto:rlazomdev@gmail.com?subject=Account Deletion Request&body=Hello,%0D%0A%0D%0AI would like to permanently delete my account and all associated data.%0D%0A%0D%0AAccount Details:%0D%0A- Registered Email: [Your Email Here]%0D%0A- Username/User ID: [Your Username Here]%0D%0A%0D%0AThank you." class="btn-submit">
+                Request Data Deletion
+            </a>
+        </div>
+
+        <footer>
+            <p>Requests are usually processed within 7 business days. You will receive a confirmation email once completed.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
